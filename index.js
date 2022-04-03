@@ -136,66 +136,83 @@ function addEngineer () {
     })
 }
 
-    function addIntern() {
-        inquirer.prompt([
-            {
-                type: 'input',
-                name: 'name',
-                message: 'What is the intern name?',
-                validate: answer => {
-                    if (answer !== "") {
-                        return true;
-                    } else {
-                        console.log("Please provide the intern name!")
-                        return false;
-                    }
+function addIntern() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the intern name?',
+            validate: answer => {
+                if (answer !== "") {
+                    return true;
+                } else {
+                    console.log("Please provide the intern name!")
+                    return false;
                 }
-            },
-            {
-                type: 'input',
-                name: 'id',
-                message: 'What is the intern ID?',
-                validate: answer => {
-                    if (answer !== "") {
-                        return true;
-                    } else {
-                        console.log("Please provide the intern ID!")
-                        return false;
-                    }
+            }
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the intern ID?',
+            validate: answer => {
+                if (answer !== "") {
+                    return true;
+                } else {
+                    console.log("Please provide the intern ID!")
+                    return false;
                 }
-            },
-            {
-                type: 'input',
-                name: 'email',
-                message: 'What is the intern e-mail?',
-                validate: emailInput => {
-                    if (emailInput !== "") {
-                        return true;
-                    } else {
-                        console.log("Please provide the intern e-mail!")
-                        return false;
-                    }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the intern e-mail?',
+            validate: emailInput => {
+                if (emailInput !== "") {
+                    return true;
+                } else {
+                    console.log("Please provide the intern e-mail!")
+                    return false;
                 }
-            },
-            {
-                type: 'input',
-                name: 'school',
-                message: 'What is the intern school name?',
-                validate: schoolInput => {
-                    if (schoolInput !== "") {
-                        return true;
-                    } else {
-                        console.log("Please provide the intern name!")
-                        return false;
-                    }
+            }
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the intern school name?',
+            validate: schoolInput => {
+                if (schoolInput !== "") {
+                    return true;
+                } else {
+                    console.log("Please provide the intern name!")
+                    return false;
                 }
-            },
-        ]).then(answer => {
-            let intern = new Intern(answer.name, answer,id, answer.email, "Intern", answer.school);
-            teamArr.push(intern);
-            createTeam();
-        })
-    };
+            }
+        },
+    ]).then(answer => {
+        let intern = new Intern(answer.name, answer, id, answer.email, "Intern", answer.school);
+        teamArr.push(intern);
+        createTeam();
+    })
+};
+
+const writeTofile = data => {
+    const generatedHTML = generateHTML(data);
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/generated.html', generateHTML, err=> {
+            if (err) {
+            }
+            resolve ({
+                ok: true,
+                message: 'Team Generated!'
+            });
+        });
+    });
+};
+
+
+
 // function startPrompt() {
 //     console.log("Welcome to the team generator ");
 //     inquirer.prompt([
