@@ -319,7 +319,7 @@ function createTeam(){
             "Manager",
             "Engineer",
             "Intern",
-            "None"
+            "Create team!"
         ]
         }
     ]).then(answer => {
