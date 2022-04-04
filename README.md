@@ -17,4 +17,4 @@ A generator will create a team
 Made by Alvin Badillo🙉
 
 ## Video link of generator in action
-[Working generator](https://drive.google.com/file/d/1X-nG3tjumXrC52Gs0p0G6k_RtTs87omZ/view)
+[Working generator](https://drive.google.com/file/d/1VTAlgbF8JJkCV1X__ct0vzwZe6fm8AHP/view)
