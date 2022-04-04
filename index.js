@@ -218,7 +218,7 @@ function teamArrToHTML() {
                 <div class="col-md-6 col-lg-4">
                     <div class='card employee-card'>
                         <div class='manager-card'>
-                            <div class='card-header bg-dark text-light'> 
+                            <div class='card-header bg-primary text-light'> 
                                 <h2><i class="fas fa-mug-hot"></i> Manager</h2>
                             </div>
                             <ul class="list-group list-group-flush list-unstyled">
@@ -237,7 +237,7 @@ function teamArrToHTML() {
                 <div class="col-md=6 col-lg-4">
                     <div class='card employee-card'>
                         <div class='engineer-card'>
-                            <div class='card-header bg-dark text-light'>
+                            <div class='card-header bg-primary text-light'>
                                 <h2><i class="fas fa-glasses"></i> Engineer</h2>
                             </div>
                             <ul class="list-group list-group-flush list-unstyled">
@@ -256,7 +256,7 @@ function teamArrToHTML() {
                 <div class="col-md-6 col-lg-4">
                     <div class='card employee-card'>
                         <div class='intern-card'>
-                            <div class='card-header bg-dark text-light'>
+                            <div class='card-header bg-primary text-light'>
                                 <h2><i class="fas fa-user-graduate"></i> Intern</h2>
                             </div>
                             <ul class="list-group list-group-flush list-unstyled">
@@ -294,7 +294,8 @@ const generateHTML = () => {
     
     <body>
         <header>
-            <div class="container flex-row justify-space-between align-center py-3">
+            <div class="container flex-row justify-space-between text-center py-3 bg-danger">
+            <h1>My Team</>
             </div>
         </header>
         <main class="container my-5">
