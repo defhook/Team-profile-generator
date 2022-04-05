@@ -8,7 +8,6 @@ A generator will create a team
 * NPM
 * Inquirer
 * Bootstrap
-* Ajax
 
 ## Tested with
 * Jest
